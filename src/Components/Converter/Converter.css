@@ -1,0 +1,83 @@
+
+.ConverterInput {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+    height: 24rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ConverterInput * div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Design input-amount */
+.ConverterInput label:first-child {
+    color: #282c34;
+    padding: 3px;
+    text-align: start;
+}
+
+.ConverterInput * input[type="number"] {
+    padding: 5px;
+    width: 100%;
+    margin-left: 15px;
+    border: 2px solid #084061;
+}
+
+.ConverterInput select {
+    margin-left: 15px;
+    background: #2b5a78;
+    border: none;
+    color: white;
+}
+
+/** Change the background from select form */
+select option:nth-child(2n+1), select option:nth-child(2n) {
+    background: #61dafb;
+}
+
+/** Design btns and div result */
+button[type="submit"] {
+    display: flex;
+    padding: 7px;
+    margin-top: 26px;
+    justify-content: center !important;
+    background: #61dafb;
+    color: white;
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+
+.result {
+    display: none;
+}
+
+.ConverterInput div:last-child {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/** Deco btn arrows */
+button[type="button"] {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-radius: 50%;
+    padding: 16px;
+    border: 2px solid #084061;
+}
+
+button[type="button"] svg {
+    color: #61dafb;
+}
