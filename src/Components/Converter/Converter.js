@@ -5,6 +5,16 @@ import { faArrowRightArrowLeft} from '@fortawesome/free-solid-svg-icons';
 export const Converter = function({units,setConverter}) {
 
     /**
+     * Check action click convert
+     * @param e
+     */
+    function handleClickConvert(e) {
+        units
+            .filter(unit => units === 0 || units === units)
+            .map(units => console.log("here"))
+    }
+
+    /**
      * Refresh the page of the site web
      * @param e
      */
@@ -66,7 +76,7 @@ export const Converter = function({units,setConverter}) {
                 <div className="result"></div>
 
                 <div>
-                    <button type="submit">Convertir</button>
+                    <button type="submit" onClick={handleClickConvert}>Convertir</button>
                     <button type="submit" onClick={handleClick}>Reset</button>
                 </div>
 
