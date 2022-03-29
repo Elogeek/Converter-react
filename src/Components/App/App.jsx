@@ -7,8 +7,8 @@ function App() {
 
     const unitsList = [
         {id:1, unitStart: "1m", unitConverter: "10dm"},
-        {id:2, unitStart: "1dm", unitConverter: "10cm"},
-        {id:3, unitStart: "1cm", unitConverter: "10mm"},
+        //id:2, unitStart: "1dm", unitConverter: "10cm"},
+        //{id:3, unitStart: "1cm", unitConverter: "10mm"},
         {id:4, unitStart: "1m", unitConverter: "100cm"},
         {id:5, unitStart: "1m", unitConverter: "1000mm"},
     ];

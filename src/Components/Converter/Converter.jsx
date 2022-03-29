@@ -11,7 +11,7 @@ export const Converter = function({units,setConverter}) {
     function handleClickConvert(e) {
         units
             .filter(unit => units === 0 || units === units)
-            .map(units => console.log("here"))
+            .map(units => console.log("here result test : " + units.unitStart + " vaut " + units.unitConverter));
     }
 
     /**
@@ -19,7 +19,7 @@ export const Converter = function({units,setConverter}) {
      * @param e
      */
     function handleClick(e) {
-        units.map(unit =>unit.unitStart === 0);
+        units.map(unit => unit.unitStart === 0);
         setConverter(true);
     }
 
@@ -40,13 +40,7 @@ export const Converter = function({units,setConverter}) {
                         onChange={(e) => setConverter(e.target.value)}
                     >
                         <option value="m">mètre</option>
-                        <option value="dm">décimètre</option>
-                        <option value="cm">centimètre</option>
-                        <option value="mm">millimètre</option>
-                        <option value="l">litre</option>
-                        <option value="dl">décilitre</option>
-                        <option value="cl">centilitre</option>
-                        <option value="ml">millilitre</option>
+
                     </select>
                 </div>
 
@@ -66,14 +60,12 @@ export const Converter = function({units,setConverter}) {
                         <option value="dm">décimètre</option>
                         <option value="cm">centimètre</option>
                         <option value="mm">millimètre</option>
-                        <option value="l">litre</option>
-                        <option value="dl">décilitre</option>
-                        <option value="cl">centilitre</option>
-                        <option value="ml">millilitre</option>
                     </select>
                 </div>
 
-                <div className="result"></div>
+                <div className="result">
+                    Le résultat est : {units.unitStart} vaut {units.unitConverter} !
+                </div>
 
                 <div>
                     <button type="submit" onClick={handleClickConvert}>Convertir</button>
