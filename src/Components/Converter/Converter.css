@@ -67,8 +67,10 @@ button[type="submit"] {
     width: 100%;
 }
 
-.result {
-    display: none;
+/** Design result **/
+#green {
+    color: greenyellow;
+    font-weight: bold;
 }
 
 .ConverterInput div:last-child {

@@ -59,7 +59,7 @@ export const Converter = function() {
     ];
 
     /**
-     * Check and manage action click convert
+     * Check and manage action click btn convert
      * @param e
      */
     function handleClickConvert(e) {
@@ -85,7 +85,6 @@ export const Converter = function() {
                         onChange={e => setFrom(parseInt(e.target.value))}>
                         {values.map(converter => <option key={converter.id} value={converter.id}>{converter.name}</option>)}
                     </select>
-                    {/* Field for choosing conversion units */}
                     <select
                         name="input-convert"
                         id="input-convert"
@@ -95,7 +94,7 @@ export const Converter = function() {
                     </select>
                 </div>
 
-                <div id="btnArrow">
+                <div>
                     <button type="button"><FontAwesomeIcon icon={faEquals}/></button>
                 </div>
 
@@ -107,15 +106,16 @@ export const Converter = function() {
                     </select>
                 </div>
 
+                {/* Displays the result of the conversion */}
                 <div className="result">
-                    <span>
-                         Le résultat est : {result.toString() + " " + (values[to].id !== 0 ? values[to].name: "") + units[unit].title + (result > 1 ? "s" : "")} !
-                    </span>
+                     <span id="green">
+                         Le résultat est : {result.toString() + " " + (values[to].id !== 0 ? values[to].name: "") + units[unit].title } !
+                     </span>
                 </div>
 
                 <div>
                     <button type="submit" onClick={handleClickConvert}>Convertir</button>
-
+                    {/* Refresh the page */}
                     <button type="submit"
                        onClick={
                             ()=> {
