@@ -13,11 +13,21 @@ form {
     justify-content: flex-start;
 }
 
-.ConverterInput * div {
+.ConverterInput div {
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.ConverterInput #btnArrow {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    padding-left: 80px;
+    width: 71%;
 }
 
 /* Design input-amount */
@@ -39,6 +49,9 @@ form {
     background: #2b5a78;
     border: none;
     color: white;
+    padding: 1rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 /** Change the background from select form */
