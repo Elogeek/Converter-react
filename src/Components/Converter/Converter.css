@@ -21,15 +21,6 @@ form {
     flex-direction: column;
 }
 
-.ConverterInput #btnArrow {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    padding-left: 80px;
-    width: 71%;
-}
-
 /* Design input-amount */
 .ConverterInput label:first-child {
     color: #282c34;
@@ -42,6 +33,9 @@ form {
     width: 100%;
     margin-left: 15px;
     border: 2px solid #084061;
+    color: #61dafb;
+   font-weight: bold;
+    font-size: medium;
 }
 
 .ConverterInput select {
@@ -83,12 +77,11 @@ button[type="submit"] {
     display: inline-block;
 }
 
-/** Deco btn arrows */
+/** Deco btn equal */
 button[type="button"] {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border-radius: 50%;
-    padding: 16px;
-    border: 2px solid #084061;
+    border: none;
+    font-size: 30px;
 }
 
 button[type="button"] svg {

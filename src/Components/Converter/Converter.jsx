@@ -1,6 +1,6 @@
 import "./Converter.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import { faEquals} from '@fortawesome/free-solid-svg-icons';
 import {useState} from "react";
 
 export const Converter = function() {
@@ -20,7 +20,7 @@ export const Converter = function() {
     const values = [
         {
             id: 0,
-            name: "valeur",
+            name: "valeurs",
             base: 1,
         },
         {
@@ -46,10 +46,14 @@ export const Converter = function() {
     const units = [
         {
             id: 0,
-            title: "metre",
+            title: "unitées",
         },
         {
             id: 1,
+            title: "mètre",
+        },
+        {
+            id: 2,
             title: "litre"
         }
     ];
@@ -92,15 +96,21 @@ export const Converter = function() {
                 </div>
 
                 <div id="btnArrow">
-                    <button type="button"><FontAwesomeIcon icon={faArrowRightArrowLeft}/></button>
+                    <button type="button"><FontAwesomeIcon icon={faEquals}/></button>
                 </div>
 
-                <div className="result">
+                <div>
+                    {/* Field for choosing conversion units */}
                     <label htmlFor="input-convert">Convertir l'unité en : </label>
                     <select onChange={e => setTo(parseInt(e.target.value))}>
                         {values.map(converter => <option key={converter.id} value={converter.id}>{converter.name}</option>)}
                     </select>
-                    Le résultat est : {result.toString() + " " + (values[to].id !== 0 ? values[to].name: "") + units[unit].title + (result > 1 ? "s" : "")} !
+                </div>
+
+                <div className="result">
+                    <span>
+                         Le résultat est : {result.toString() + " " + (values[to].id !== 0 ? values[to].name: "") + units[unit].title + (result > 1 ? "s" : "")} !
+                    </span>
                 </div>
 
                 <div>
