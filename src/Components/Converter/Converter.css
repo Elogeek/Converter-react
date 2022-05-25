@@ -68,6 +68,10 @@ button[type="submit"] {
 }
 
 /** Design result **/
+.ConverterInput .result {
+    display: none;
+}
+
 #green {
     color: greenyellow;
     font-weight: bold;

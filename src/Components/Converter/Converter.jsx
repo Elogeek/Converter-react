@@ -65,6 +65,7 @@ export const Converter = function() {
     function handleClickConvert(e) {
         let res = (values[to].base / values[from].base) * entry;
         setResult(res.toString());
+        //Todo display result
     }
 
     return(
@@ -119,6 +120,7 @@ export const Converter = function() {
                     <button type="submit"
                        onClick={
                             ()=> {
+                                // Todo debugg here
                                 setEntry(0);
                                 setFrom(0);
                                 setTo(0);
